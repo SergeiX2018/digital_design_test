@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Страница с категориями товаров</title>
+</head>
+
+<body>
+    <header class="categories_wrapper">
+        <div class="container">
+            <nav class="nav_block">
+                <ul class="categories_list">
+                    <li class="categories_items"><a href="#technique">Бытовая техника</a></li>
+                    <li class="categories_items"><a href="#health">Красота и здоровье</a></li>
+                    <li class="categories_items"><a href="#hardware">Сетевое оборудование</a></li>
+                    <li class="theme-toggle">
+                        <button id="themeToggleBtn">Тема</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+
+    <main class="main-menu">
+        <div class="container">
+            <section class="categories_section">
+                <h1 class="categories_header">Категории товаров</h1>
+                <div class="categories_wrap">
+                    <div class="categories_block">
+                        <h2 id ="technique" class="categories_name">Бытовая техника</h2>
+                        <ul class="card_list" id="appliances_list">
+                            <template id="appliance_template">
+                                <li class="card_items">
+                                    <figure class="img-card_block">
+                                        <img class="img_items" src="" alt="">
+                                        <figcaption class="description_img"></figcaption>
+                                    </figure>
+                                    <p  id="date" class="add-date">Дата добавления:</p>
+                                    <button class="buy_btn">Купить</button>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+    
+                    <div class="categories_block">
+                        <h2 id="health" class="categories_name">Красота и здоровье</h2>
+                        <ul class="card_list" id="beauty_list">
+                            <template id="beauty_template">
+                                <li class="card_items">
+                                    <figure class="img-card_block">
+                                        <img class="img_items" src="" alt="">
+                                        <figcaption class="description_img"></figcaption>
+                                    </figure>
+                                    <p id="date" class="add-date">Дата добавления:</p>
+                                    <button class="buy_btn">Купить</button>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+    
+                    <div class="categories_block">
+                        <h2 id="hardware" class="categories_name">Сетевое оборудование</h2>
+                        <ul class="card_list" id="network_list">
+                            <template id="network_template">
+                                <li class="card_items">
+                                    <figure class="img-card_block">
+                                        <img class="img_items" src="" alt="">
+                                        <figcaption class="description_img"></figcaption>
+                                    </figure>
+                                    <p id="date" class="add-date">Дата добавления:</p>
+                                    <button class="buy_btn">Купить</button>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+    
+            </section>
+    
+            <!-- Форма покупки -->
+            <section class="buy-form_secton">
+                <h2 class="form-buy_header">Форма покупки товара</h2>
+                <form action="#" name="buy">
+                    <div class="form_flex-group">
+                        <div class="count-number_block">
+                            <label for="number_items">Количество</label>
+                            <input id="number_items" type="number" name="count" class="count_items" min="1" value="1">
+                        </div>
+                        
+                        <div class="specifying-color_block">
+                            <span>Цвет</span>
+                            <div class="colors_block">
+                                <input id="blue_items" type="radio" name="color" value="Синий">
+                                <label for="blue_items">Синий</label>
+                            </div>
+                            
+                            <div class="colors_block">
+                                <input id="black_items" type="radio" name="color" value="Черный">
+                                <label for="black_items">Черный</label>
+                            </div>
+        
+                            <div class="colors_block">
+                                <input id="red_items" type="radio" name="color" value="Красный">
+                                <label for="red_items">Красный</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+    
+                    <div class="textarea-comment_block">
+                        <textarea name="comment" id="comment_item"  maxlength="2000">Ваш комментарий:</textarea>
+                    </div>
+    
+                    <div class="form-buy_btn-block">
+                        <input type="button" class="buy_btn" id="buy-info" value="Купить">
+                        <input type="button" class="buy_btn"  id="close" value="Закрыть">
+                    </div>
+                </form>
+            </section>
+        </div>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <ul class="categories_list">
+                <li class="categories_items"><a href="#technique">Бытовая техника</a></li>
+                <li class="categories_items"><a href="#health">Красота и здоровье</a></li>
+                <li class="categories_items"><a href="#hardware">Сетевое оборудование</a></li>
+            </ul>
+            <button onclick="scrollToTop()" id="scrollToTopButton">наверх</button>
+        </div>
+        
+    </footer>
+
+    <script src="categories.js"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,377 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width:100%;
+}
+
+.container{
+    width: 1440px; /* необязательно, чтобы ограничить максимальную ширину */
+    margin: 0 auto;
+}
+
+/* header */
+
+.categories_wrap {
+    display: flex;
+    justify-content: flex-start; 
+    flex-wrap: wrap;
+}
+
+.categories_list {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.block {
+    margin-top: 40px; /* Замените 40px на высоту вашего фиксированного меню */
+}
+
+
+.categories_wrapper .categories_list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 10px;
+}
+
+.categories_list .categories_items, .theme-toggle {
+    list-style-type: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.main-menu .categories_header {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+    color:#000000;
+}
+
+.theme-toggle button {
+    background: linear-gradient(#fff,#000);
+    width:90px;
+    height: 30px;
+    color: #fff;
+    cursor:pointer;
+    border-style: none;
+    border-radius: 10px;
+  }
+  
+  .theme-dark {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .theme-dark a {
+    color: #fff;
+  }
+
+/* Main */
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.main-menu .card_list {
+    display: flex;
+    justify-content: flex-start; 
+    flex-wrap: wrap;  
+    padding-left: 5%;
+}
+
+.add-date{
+    padding: 0 35px;
+    text-align: center;
+}
+
+.categories_block {
+    width: 720px;
+}
+
+.categories_block .categories_name {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.card_list .card_items {
+    list-style-type: none;
+    width: 200px;
+    height: 300px;
+    margin-right: 20px; 
+    margin-bottom: 20px; 
+    border:2px solid #00FF00;
+    border-radius: 10px;
+}
+
+.img-card_block .img_items {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    margin-top:15px;
+}
+
+.card_items .description_img {
+    text-align: center;
+    padding-left:10px;
+    padding-right: 10px;
+}
+
+.card_items .buy_btn {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    width: 80px;
+    height: 20px;
+    border-style: none;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#scrollToTopButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 40px;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #00FF00;
+}
+
+.categories_section {
+    position: relative;
+  }
+
+  .categories_list {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .hidden {
+    display: none;
+  }
+#scrollToTopButton.show {
+    display: block;
+}
+
+/* форма покупки */
+
+.buy-form_secton{
+    width:100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#f7f7f7;
+}
+
+.form_flex-group{
+    display:flex;
+    justify-content: space-between;
+    margin-top:20px;
+}
+
+.count-number_block .count_items{
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.specifying-color_block input[type="radio"] {
+    vertical-align: middle;
+}
+
+.textarea-comment_block #comment_item{
+    width:390px;
+    height:100px;
+    resize: none;
+    padding:5px 10px;
+    margin-top:10px;
+    border-radius: 10px;
+}
+
+.count-number_block{
+    text-align: center;
+}
+
+.form-buy_btn-block{
+    text-align: center;
+}
+
+.form-buy_btn-block .buy_btn{
+    width:90px;
+    height: 30px;
+    border-style: none;
+    cursor:pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+ .specifying-color_block  .colors_block{
+    display:inline-block;
+}
+
+/* footer */
+.footer {
+    margin-top: auto; 
+}
+
+.footer .categories_list{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+
+@media  (max-width: 425px){
+    html, body {
+        overflow-x: hidden;
+      }
+
+      .container{
+        width:100%;
+      }
+
+      .categories_list .categories_items, .theme-toggle {
+        font-size: 12px;
+    }
+
+    .theme-toggle button {
+        width: 40px;
+        height: 20px;
+        border-radius: 5px;
+        font-size: 10px;
+    }
+
+    .main-menu .categories_header {
+        font-size: 20px;
+    }
+
+    .categories_block .categories_name {
+       font-size: 14px;
+    }
+
+    .card_list .card_items {
+        width:40%;
+    }
+
+    .img-card_block .img_items {
+        width:80%;
+    }
+
+    .card_items .description_img, .add-date {
+        font-size: 12px;
+        padding: 0 20px;
+    }
+
+    #scrollToTopButton.show {
+        display: block;
+        width: 40px;
+        height: 20px;
+        border-radius: 5px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .form-buy_header{
+        font-size: 12px;
+    }
+
+    label{
+        font-size: 10px;
+    }
+
+    .count-number_block .count_items {
+        width: 30px;
+        height: 20px;
+    }
+    form{
+        width:100%;
+    }
+
+    .form_flex-group {
+        justify-content: space-around;
+    }
+
+    .textarea-comment_block #comment_item {
+        display: block;
+        width: 90%;
+       margin:0 auto;
+    }
+
+    .main-menu .card_list {
+        padding-left: 10%;
+    }
+}
+
+    @media (min-width: 425px) and (max-width: 1200px){
+        html, body {
+            overflow-x: hidden;
+          }
+    
+        .container{
+            width:100%;
+        }
+
+        .categories_list .categories_items, .theme-toggle {
+           font-size: 16px;
+        }
+
+        .theme-toggle button {
+            width: 70px;
+            height: 25px;
+            font-size: 12px;
+        }
+
+        .main-menu .categories_header {
+            font-size: 20px;
+        }
+
+        .categories_block .categories_name {
+            font-size: 16px;
+        }
+
+        #scrollToTopButton.show {
+            display: block;
+            width: 70px;
+            height: 25px;
+            font-size: 12px;
+        }
+
+        .categories_block {
+            width: 100%;
+        }
+
+        .card_list .card_items {
+            width: 29%;
+        }
+
+    }
