@@ -228,10 +228,10 @@ networkData.forEach((product) => {
 
 
 window.addEventListener('scroll', function() {
-    var fixedMenu = document.querySelector('.categories_wrapper');
-    var mainMenu = document.querySelector('.main-menu');
-    var footer = document.querySelector('.footer');
-    var scrollPosition = window.scrollY;
+    let fixedMenu = document.querySelector('.categories_wrapper');
+    let mainMenu = document.querySelector('.main-menu');
+    let footer = document.querySelector('.footer');
+    let scrollPosition = window.scrollY;
 
     if (scrollPosition >= fixedMenu.offsetHeight) {
         mainMenu.style.marginTop = fixedMenu.offsetHeight + 'px';
