@@ -226,21 +226,6 @@ networkData.forEach((product) => {
 
 // Реализация логики закрепленной кнопки для возврата наверх.
 
-
-window.addEventListener('scroll', function() {
-    let fixedMenu = document.querySelector('.categories_wrapper');
-    let mainMenu = document.querySelector('.main-menu');
-    let footer = document.querySelector('.footer');
-    let scrollPosition = window.scrollY;
-
-    if (scrollPosition >= fixedMenu.offsetHeight) {
-        mainMenu.style.marginTop = fixedMenu.offsetHeight + 'px';
-        footer.style.marginTop = '0';
-    } else {
-        mainMenu.style.marginTop = '0';
-        footer.style.marginTop = '';
-    }
-});
 window.onscroll = function() { showScrollButton() };
 
 function showScrollButton() {
